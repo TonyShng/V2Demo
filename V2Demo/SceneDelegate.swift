@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import DrawerController
+import SVProgressHUD
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -13,10 +15,49 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+//        URLProtocol.registerClass(webview)
+        
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            self.window = window
+            V2Client.shareInstance.window = self.window
+            self.window?.frame = UIScreen.main.bounds
+            self.window?.makeKeyAndVisible()
+        }
+        
+        let centerNav = V2EXNavigationController(rootViewController: HomeViewController())
+        let leftViewController = LeftViewController()
+        let rightViewController = RightViewController()
+        let drawerController = DrawerController(centerViewController: centerNav, leftDrawerViewController: leftViewController, rightDrawerViewController: rightViewController)
+        
+        self.window?.themeChangedHandler = {[weak self] (style) -> Void in
+            self?.window?.backgroundColor = V2EXColor.colors.v2_backgroundColor;
+            drawerController.view.backgroundColor = V2EXColor.colors.v2_backgroundColor
+        }
+        
+        drawerController.maximumLeftDrawerWidth = 230
+        drawerController.maximumRightDrawerWidth = rightViewController.maximumRightDrawerWidth()
+        drawerController.openDrawerGestureModeMask = OpenDrawerGestureMode.panningCenterView
+        drawerController.closeDrawerGestureModeMask = CloseDrawerGestureMode.all
+        self.window?.rootViewController = drawerController
+        
+        V2Client.shareInstance.drawerController = drawerController
+        V2Client.shareInstance.centerViewController = centerNav.viewControllers[0] as? HomeViewController
+        V2Client.shareInstance.centerNavigation = centerNav
+        
+        #if DEBUG
+            let fpsLabel = V2FPSLabel(frame: CGRect(x: 15, y: SCREEN_HEIGHT - 40, width: 55, height: 20))
+            self.window?.addSubview(fpsLabel)
+        #else
+        #endif
+        
+        SVProgressHUD.setForegroundColor(UIColor(white: 1, alpha: 1))
+        SVProgressHUD.setBackgroundColor(UIColor(white: 0.15, alpha: 0.85))
+        SVProgressHUD.setDefaultMaskType(.none)
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.setContainerView(self.window)
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -46,7 +87,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+class V2Window: UIWindow {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if UIApplication.shared.applicationState == .active {
+            V2EXColor.sharedInstance.refreshStyleIfNeeded()
+        }
+    }
+}
