@@ -5,7 +5,6 @@
 //  Created by a on 2021/8/25.
 //
 
-import Foundation
 import UIKit
 
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width

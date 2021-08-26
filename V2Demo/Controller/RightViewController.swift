@@ -49,11 +49,7 @@ class RightViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override var preferredStatusBarStyle: UIStatusBarStyle{
         get {
             if V2EXColor.sharedInstance.style == V2EXColor.V2EXColorStyleDefault {
-                if #available(iOS 13.0, *) {
-                    return .darkContent
-                } else {
-                    return .default
-                }
+                return .darkContent
             }
             else{
                 return .lightContent

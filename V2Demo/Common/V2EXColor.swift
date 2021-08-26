@@ -288,14 +288,12 @@ class V2EXColor: NSObject {
     }
     static var systemStyle:String {
         get {
-            if #available(iOS 13.0, *) {
-                let style = V2Client.shareInstance.window?.traitCollection.userInterfaceStyle ?? UIUserInterfaceStyle.unspecified
-                if style == UIUserInterfaceStyle.light {
-                    return V2EXColor.V2EXColorStyleDefault
-                }
-                else if style == UIUserInterfaceStyle.dark {
-                    return V2EXColor.V2EXColorStyleDark
-                }
+            let style = V2Client.shareInstance.window?.traitCollection.userInterfaceStyle ?? UIUserInterfaceStyle.unspecified
+            if style == UIUserInterfaceStyle.light {
+                return V2EXColor.V2EXColorStyleDefault
+            }
+            else if style == UIUserInterfaceStyle.dark {
+                return V2EXColor.V2EXColorStyleDark
             }
             return V2EXColor.V2EXColorStyleDefault
         }
@@ -314,9 +312,7 @@ class V2EXColor: NSObject {
             isFollowSystem = value
         }
         else{
-            if #available(iOS 13.0, *) {
-                isFollowSystem = true
-            }
+            isFollowSystem = true
         }
         self.isFollowSystem = isFollowSystem
         

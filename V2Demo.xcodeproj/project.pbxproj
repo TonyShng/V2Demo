@@ -27,6 +27,14 @@
 		001F4BAC26D625F300AD921E /* RightNodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BAB26D625F300AD921E /* RightNodeTableViewCell.swift */; };
 		001F4BB026D633DB00AD921E /* 32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 001F4BAE26D633DB00AD921E /* 32.jpg */; };
 		001F4BB126D633DB00AD921E /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 001F4BAF26D633DB00AD921E /* 12.jpg */; };
+		001F4BB326D7140B00AD921E /* LeftUserHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BB226D7140B00AD921E /* LeftUserHeadCell.swift */; };
+		001F4BB526D7142C00AD921E /* LeftNodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BB426D7142C00AD921E /* LeftNodeTableViewCell.swift */; };
+		001F4BB726D7144500AD921E /* LeftNotifictionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BB626D7144500AD921E /* LeftNotifictionCell.swift */; };
+		001F4BB926D71A8E00AD921E /* V2User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BB826D71A8E00AD921E /* V2User.swift */; };
+		001F4BBC26D735AF00AD921E /* BaseJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BBB26D735AF00AD921E /* BaseJsonModel.swift */; };
+		001F4BBE26D7389C00AD921E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BBD26D7389C00AD921E /* UserModel.swift */; };
+		001F4BC126D7716200AD921E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F4BC026D7716200AD921E /* UIImage+Extension.swift */; };
+		001F4BC326D7741E00AD921E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001F4BC226D7741E00AD921E /* Media.xcassets */; };
 		91D1FD8B22E98D7F440333E0 /* libPods-V2DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A9539906C9013C8D7627C1 /* libPods-V2DemoTests.a */; };
 		E0FB77AA3CA6CB4184199791 /* libPods-V2Demo-V2DemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48006ED0F2518E92CCB10E7F /* libPods-V2Demo-V2DemoUITests.a */; };
 		F8AFCF32E7917A683DAC2D61 /* libPods-V2Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9034F75C776439BAAE179C44 /* libPods-V2Demo.a */; };
@@ -78,6 +86,14 @@
 		001F4BAB26D625F300AD921E /* RightNodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightNodeTableViewCell.swift; sourceTree = "<group>"; };
 		001F4BAE26D633DB00AD921E /* 32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 32.jpg; sourceTree = "<group>"; };
 		001F4BAF26D633DB00AD921E /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		001F4BB226D7140B00AD921E /* LeftUserHeadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftUserHeadCell.swift; sourceTree = "<group>"; };
+		001F4BB426D7142C00AD921E /* LeftNodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNodeTableViewCell.swift; sourceTree = "<group>"; };
+		001F4BB626D7144500AD921E /* LeftNotifictionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNotifictionCell.swift; sourceTree = "<group>"; };
+		001F4BB826D71A8E00AD921E /* V2User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2User.swift; sourceTree = "<group>"; };
+		001F4BBB26D735AF00AD921E /* BaseJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJsonModel.swift; sourceTree = "<group>"; };
+		001F4BBD26D7389C00AD921E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		001F4BC026D7716200AD921E /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		001F4BC226D7741E00AD921E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		2AB63E1B8C6B548C07035D2D /* Pods-V2DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2DemoTests.release.xcconfig"; path = "Target Support Files/Pods-V2DemoTests/Pods-V2DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C42ED90D5F389C15574C90C /* Pods-V2DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-V2DemoTests/Pods-V2DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48006ED0F2518E92CCB10E7F /* libPods-V2Demo-V2DemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2Demo-V2DemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,10 +195,12 @@
 		001F4B8426D6098F00AD921E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				001F4BBF26D76FCF00AD921E /* Extension */,
 				001F4B8526D609B700AD921E /* V2Client.swift */,
 				001F4B9026D6146100AD921E /* V2EXColor.swift */,
 				001F4B9226D614DA00AD921E /* V2EXSettings.swift */,
 				001F4B9826D61BD900AD921E /* V2Define.swift */,
+				001F4BB826D71A8E00AD921E /* V2User.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -202,6 +220,9 @@
 			children = (
 				001F4B9526D6184800AD921E /* Control */,
 				001F4BAB26D625F300AD921E /* RightNodeTableViewCell.swift */,
+				001F4BB226D7140B00AD921E /* LeftUserHeadCell.swift */,
+				001F4BB426D7142C00AD921E /* LeftNodeTableViewCell.swift */,
+				001F4BB626D7144500AD921E /* LeftNotifictionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				001F4B9B26D61F0D00AD921E /* TopicListModel.swift */,
+				001F4BBB26D735AF00AD921E /* BaseJsonModel.swift */,
+				001F4BBD26D7389C00AD921E /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,8 +250,17 @@
 			children = (
 				001F4BAF26D633DB00AD921E /* 12.jpg */,
 				001F4BAE26D633DB00AD921E /* 32.jpg */,
+				001F4BC226D7741E00AD921E /* Media.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		001F4BBF26D76FCF00AD921E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				001F4BC026D7716200AD921E /* UIImage+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		BB3AF44A014EF01C07B82B3D /* Frameworks */ = {
@@ -367,6 +399,7 @@
 				001F4B6126D5ED4000AD921E /* LaunchScreen.storyboard in Resources */,
 				001F4BA626D6220700AD921E /* Localizable.strings in Resources */,
 				001F4BB026D633DB00AD921E /* 32.jpg in Resources */,
+				001F4BC326D7741E00AD921E /* Media.xcassets in Resources */,
 				001F4B5E26D5ED4000AD921E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,11 +533,18 @@
 				001F4B9326D614DA00AD921E /* V2EXSettings.swift in Sources */,
 				001F4B8F26D60C1500AD921E /* RightViewController.swift in Sources */,
 				001F4B8626D609B700AD921E /* V2Client.swift in Sources */,
+				001F4BB726D7144500AD921E /* LeftNotifictionCell.swift in Sources */,
 				001F4B9926D61BD900AD921E /* V2Define.swift in Sources */,
+				001F4BC126D7716200AD921E /* UIImage+Extension.swift in Sources */,
 				001F4B8B26D60AC100AD921E /* V2EXNavigationController.swift in Sources */,
+				001F4BBC26D735AF00AD921E /* BaseJsonModel.swift in Sources */,
+				001F4BB526D7142C00AD921E /* LeftNodeTableViewCell.swift in Sources */,
 				001F4B5526D5ED3E00AD921E /* AppDelegate.swift in Sources */,
 				001F4B8D26D60BFD00AD921E /* LeftViewController.swift in Sources */,
+				001F4BB926D71A8E00AD921E /* V2User.swift in Sources */,
+				001F4BB326D7140B00AD921E /* LeftUserHeadCell.swift in Sources */,
 				001F4B9126D6146100AD921E /* V2EXColor.swift in Sources */,
+				001F4BBE26D7389C00AD921E /* UserModel.swift in Sources */,
 				001F4B5726D5ED3E00AD921E /* SceneDelegate.swift in Sources */,
 				001F4B9C26D61F0D00AD921E /* TopicListModel.swift in Sources */,
 				001F4BAC26D625F300AD921E /* RightNodeTableViewCell.swift in Sources */,
